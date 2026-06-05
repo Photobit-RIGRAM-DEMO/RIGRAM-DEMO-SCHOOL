@@ -42,8 +42,8 @@ export default function DepartmentPage() {
       >
         {activeTab === 'detail' && <Detail department={department} mode="student" />}
         {activeTab === 'intro' && <Intro department={department} />}
-        {activeTab === 'staff' && <Staff mode="student" />}
-        {activeTab === 'union' && <Union mode="student" />}
+        {activeTab === 'staff' && <Staff department={department} mode="student" />}
+        {activeTab === 'union' && <Union  mode="student" />}
 
         <footer className="fixed bottom-0 left-1/2 -translate-x-1/2 min-w-fit">
           <BottomTab purpose="department" />
