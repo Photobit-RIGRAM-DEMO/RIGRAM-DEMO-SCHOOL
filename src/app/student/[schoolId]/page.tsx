@@ -194,74 +194,87 @@ export default function AlbumPage() {
 
 
         {/* 블록 3 상징 */}
-      <section className="relative w-full max-w-[1600px] mx-auto p-4 md:p-10 ">
-        <div className="mt-10 absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gray-800 via-gray-500 to-gray-800 z-10" />
-        <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-gray-800 via-gray-500 to-gray-800 z-10" />
-        <div className="mt-20 grid grid-cols-1 gap-6">
-          
-          <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 w-full">
+     <section className="relative w-full max-w-[1600px] mx-auto p-2 md:p-10">
 
-            <div className="relative w-full bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
-              <Image
-                src={flag?.url || "/default.png"}
-                alt="교기"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full h-auto object-contain"
-              />
-              <h1 className="text-lg font-bold text-center">교기</h1>
-            </div>
-
-            {/* 이미지 */}
-            <div className="relative w-full bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
-              <Image
-                src={tree?.url || "/default.png"}
-                alt="교목"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full h-auto object-contain"
-              />
-              <h1 className="pt-8 text-lg font-bold text-center">교목: {tree?.description}</h1>
-            </div>
-
-            <div className="relative w-full bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
-              <Image
-                src={flower?.url || "/default.png"}
-                alt="교화"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full h-auto object-contain"
-              />
-              <h1 className="pt-8 text-lg font-bold text-center">교화: {flower?.description}</h1>
-            </div>
-
-            <div className="relative w-full bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition xl:col-span-1">
-              <h1 className="pb-8 text-lg font-bold text-center">교가</h1>
-              <div  className="cursor-pointer" onClick={() =>
-                    setModal({
-                      url: song?.url || "",
-                      //width: 800,
-                      //height: 500,
-                      })
-                    }>
-              <Image
-                src={song?.url || "/default.png"}
-                alt="교가"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full h-auto object-contain"
-              />
-              </div>
-
-            </div>
-            
-          </div>
+      <div className="mt-10 absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gray-800 via-gray-500 to-gray-800 z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-gray-800 via-gray-500 to-gray-800 z-10" />
+    
+      <div className="mt-20 grid grid-cols-4 gap-2 md:gap-6 w-full">
+    
+        {/* 교기 */}
+        <div className="relative w-full bg-white border border-border rounded-md p-2 md:p-10 shadow-dropdown transition">
+          <Image
+            src={flag?.url || "/default.png"}
+            alt="교기"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto object-contain"
+          />
+          <h1 className="text-xs md:text-lg font-bold text-center">
+            교기
+          </h1>
         </div>
-      </section>
+    
+        {/* 교목 */}
+        <div className="relative w-full bg-white border border-border rounded-md p-2 md:p-10 shadow-dropdown transition">
+          <Image
+            src={tree?.url || "/default.png"}
+            alt="교목"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto object-contain"
+          />
+          <h1 className="text-xs md:text-lg font-bold text-center pt-1 md:pt-8">
+            교목: {tree?.description}
+          </h1>
+        </div>
+    
+        {/* 교화 */}
+        <div className="relative w-full bg-white border border-border rounded-md p-2 md:p-10 shadow-dropdown transition">
+          <Image
+            src={flower?.url || "/default.png"}
+            alt="교화"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto object-contain"
+          />
+          <h1 className="text-xs md:text-lg font-bold text-center pt-1 md:pt-8">
+            교화: {flower?.description}
+          </h1>
+        </div>
+    
+        {/* 교가 */}
+        <div className="relative w-full bg-white border border-border rounded-md p-2 md:p-10 shadow-dropdown transition">
+          
+          <h1 className="text-xs md:text-lg font-bold text-center pb-2 md:pb-8">
+            교가
+          </h1>
+    
+          <div
+            className="cursor-pointer"
+            onClick={() =>
+              setModal({
+                url: song?.url || "",
+              })
+            }
+          >
+            <Image
+              src={song?.url || "/default.png"}
+              alt="교가"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+    
+        </div>
+    
+      </div>
+    </section>
 
       {/* 블록 4 */}
       <section className="w-full max-w-[1600px] mx-auto bg-white border border-border rounded-md p-4 md:p-10 shadow-dropdown transition">
