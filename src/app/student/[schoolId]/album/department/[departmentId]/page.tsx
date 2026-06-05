@@ -67,17 +67,19 @@ return (
       </section>
     
       {/* 교수진 */}
-      <section className="w-full max-w-[1600px] mx-auto bg-white border border-border rounded-md px-2 py-4 md:p-10 shadow-dropdown transition flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-10">
-    
-        <div className="flex flex-col items-center gap-5">
+      <section className="w-full max-w-[1600px] mx-auto bg-white border border-border rounded-md px-2 py-4 md:p-10 shadow-dropdown transition flex flex-row items-start gap-3 md:gap-10">
+  
+        {/* 왼쪽: 담임 */}
+        <div className="w-4/12 md:w-auto flex flex-col items-center gap-5 shrink-0">
           <TeacherImage staffs={staffs ?? []} schoolId={department?.school_id} />
         </div>
-    
-        <div className="relative w-full max-w-[1100px] rounded-lg overflow-hidden">
+      
+        {/* 오른쪽: 이미지 */}
+        <div className="w-8/12 md:flex-1 rounded-lg overflow-hidden">
           <DepartmentImage imageUrl={department?.img_url ?? null} />
         </div>
     
-      </section>
+    </section>
     
       {/* 실습사진 */}
       <StudentImage
