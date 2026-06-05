@@ -35,7 +35,7 @@ export default function StaffSection({ staffs, schoolId }: Props) {
             <div className="flex flex-col items-center gap-2 md:gap-4">
         
               {staff.profile_url && (
-                <div className="relative w-full max-w-[110px] sm:max-w-[130px] md:max-w-[300px] rounded-lg overflow-hidden">
+                <div className="relative w-full max-w-[80px] sm:max-w-[100px] md:max-w-[300px] rounded-lg overflow-hidden">
                   <Image
                     src={staff.profile_url || "/default.png"}
                     alt={staff.position || "staff"}
@@ -47,7 +47,7 @@ export default function StaffSection({ staffs, schoolId }: Props) {
                 </div>
               )}
         
-              <span className="font-medium text-sm md:text-xl text-gray-900 text-center pt-2">
+              <span className="font-medium text-xs md:text-xl text-gray-900 text-center pt-1">
                 {staff.name} 선생님
               </span>
         
