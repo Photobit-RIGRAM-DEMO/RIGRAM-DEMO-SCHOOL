@@ -67,16 +67,19 @@ return (
       </section>
 
       {/* 교수진 */}
-      <section className="w-full max-w-[1600px] mx-auto bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition flex justify-center gap-10">
+      <section className="w-full max-w-[1600px] mx-auto bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition flex flex-col lg:flex-row justify-center gap-10">
+
+          <div className="flex flex-col items-center gap-5 shrink-0">
+            <TeacherImage
+              staffs={staffs ?? []}
+              schoolId={department?.school_id}
+            />
+          </div>
         
-        <div className="flex flex-col items-center gap-5">
-          <TeacherImage staffs={staffs ?? []} schoolId={department?.school_id}/>
-        </div>
-
-        <div className="relative w-full max-w-[1100px] rounded-lg overflow-hidden">
-         <DepartmentImage imageUrl={department?.img_url ?? null} />
-        </div>
-
+          <div className="relative w-full lg:max-w-[1100px] rounded-lg overflow-hidden">
+            <DepartmentImage imageUrl={department?.img_url ?? null} />
+          </div>
+      
       </section>
 
      
