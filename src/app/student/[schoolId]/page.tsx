@@ -306,7 +306,7 @@ export default function AlbumPage() {
         <div className="grid grid-cols-1 gap-6">
           {executives?.filter((executive) => executive.position === "vice principal" && executive.section === "profile").map((executive) => (
 
-                <div className="flex flex-col items-center gap-3 cursor-pointer w-full group">
+                <div key={executive.id} className="flex flex-col items-center gap-3 cursor-pointer w-full group">
                   {/* 헤더 */}
                   <div className="w-full bg-gray-50 border-y border-gray-100">
                     <div className="px-4 md:px-8 py-3 md:py-4">
@@ -355,7 +355,7 @@ export default function AlbumPage() {
         {executives
           ?.filter((executive) => executive.position === "teacher")
           .map((executive) => (
-              <div className="flex flex-col items-center gap-3 cursor-pointer group">
+              <div key={executive.id} className="flex flex-col items-center gap-3 cursor-pointer group">
 
                 {/* 이미지 */}
                 <div className="relative w-[250px] rounded-lg overflow-hidden"
@@ -401,7 +401,7 @@ export default function AlbumPage() {
         {executives
           ?.filter((executive) => executive.position === "staff")
           .map((executive) => (
-              <div className="flex flex-col items-center gap-3 cursor-pointer group">
+              <div key={executive.id} className="flex flex-col items-center gap-3 cursor-pointer group">
 
                 {/* 이미지 */}
                 <div className="relative w-[250px] rounded-lg overflow-hidden"
