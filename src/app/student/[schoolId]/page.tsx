@@ -211,7 +211,7 @@ export default function AlbumPage() {
             sizes="100vw"
             className="w-full h-auto object-contain"
           />
-          <h1 className="text-xs md:text-lg font-bold text-center">
+          <h1 className="text-[10px] md:text-lg font-bold text-center">
             교기
           </h1>
         </div>
@@ -226,7 +226,7 @@ export default function AlbumPage() {
             sizes="100vw"
             className="w-full h-auto object-contain"
           />
-          <h1 className="text-xs md:text-lg font-bold text-center pt-1 md:pt-8">
+          <h1 className="text-[10px] md:text-lg font-bold text-center pt-1 md:pt-8">
             교목: {tree?.description}
           </h1>
         </div>
@@ -241,7 +241,7 @@ export default function AlbumPage() {
             sizes="100vw"
             className="w-full h-auto object-contain"
           />
-          <h1 className="text-xs md:text-lg font-bold text-center pt-1 md:pt-8">
+          <h1 className="text-[10px] md:text-lg font-bold text-center pt-1 md:pt-8">
             교화: {flower?.description}
           </h1>
         </div>
@@ -249,7 +249,7 @@ export default function AlbumPage() {
         {/* 교가 */}
         <div className="relative w-full bg-white border border-border rounded-md p-2 md:p-10 shadow-dropdown transition">
           
-          <h1 className="text-xs md:text-lg font-bold text-center pb-2 md:pb-8">
+          <h1 className="text-[10px] md:text-lg font-bold text-center pb-2 md:pb-8">
             교가
           </h1>
     
