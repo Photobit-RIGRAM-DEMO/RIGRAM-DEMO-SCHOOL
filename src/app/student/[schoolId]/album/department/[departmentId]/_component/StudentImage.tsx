@@ -56,9 +56,9 @@ const [modal, setModal] = useState<null | {
         <ul className="grid grid-cols-1 gap-4">
           {mediaTeam.map((medium) => (
             <li key={medium.id}>
-              <div className="flex items-stretch gap-4 mt-4">
+              <div className="flex flex-col md:flex-row items-stretch gap-4 mt-4">
 
-                <div className="w-8/12 shrink-0">
+                <div className="w-full md:w-8/12">
                     <div
                     className="cursor-pointer"
                     onClick={() =>
@@ -84,7 +84,7 @@ const [modal, setModal] = useState<null | {
                     </div>
                 </div>
 
-                <div className="w-4/12 shrink-0 flex items-center">
+                <div className="w-full md:w-4/12 flex items-center">
                   <div className="grid grid-cols-3 gap-3 w-full">
 
                     {teamMembers
