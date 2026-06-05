@@ -22,7 +22,7 @@ export default function StaffSection({ staffs, schoolId }: Props) {
 
   return (
     <div className="flex flex-col items-center gap-5">
-        <h1 className="text-16 md:text-20 font-semibold pt-4 md:pt-6">
+        <h1 className="text-14 md:text-20 font-semibold pt-3 md:pt-6">
           담임
         </h1>
         
@@ -32,12 +32,12 @@ export default function StaffSection({ staffs, schoolId }: Props) {
             onClick={() => setSelectedStaff(staff)}
             className="block p-2 md:p-4 cursor-pointer"
           >
-            <div className="flex flex-col items-center gap-3 md:gap-4">
+            <div className="flex flex-col items-center gap-2 md:gap-4">
         
               {staff.profile_url && (
-                <div className="relative w-full max-w-[160px] md:max-w-[300px] rounded-lg overflow-hidden">
+                <div className="relative w-full max-w-[110px] sm:max-w-[130px] md:max-w-[300px] rounded-lg overflow-hidden">
                   <Image
-                    src={staff.profile_url}
+                    src={staff.profile_url || "/default.png"}
                     alt={staff.position || "staff"}
                     width={0}
                     height={0}
@@ -47,7 +47,7 @@ export default function StaffSection({ staffs, schoolId }: Props) {
                 </div>
               )}
         
-              <span className="font-medium text-base md:text-xl text-gray-900 text-center pt-2 md:pt-5">
+              <span className="font-medium text-sm md:text-xl text-gray-900 text-center pt-2">
                 {staff.name} 선생님
               </span>
         
