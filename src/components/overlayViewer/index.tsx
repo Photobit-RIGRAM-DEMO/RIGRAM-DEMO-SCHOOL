@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 interface OverlayViewerProps {
   media: Media | null;
-  members: string[];
+  members?: string[];
   onClose: () => void;
 }
 
@@ -42,7 +42,7 @@ export default function OverlayViewer({ media, members, onClose }: OverlayViewer
         </div>
 
         <div className="mt-6 text-center text-black/60 text-2xl">
-          {media.title}  {members.join(', ')}
+          {media.title}  {members?.join(', ')}
         </div>
       </div>
     </div>
