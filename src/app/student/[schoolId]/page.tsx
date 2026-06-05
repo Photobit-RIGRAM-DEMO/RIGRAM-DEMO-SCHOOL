@@ -181,7 +181,7 @@ export default function AlbumPage() {
 
        <div className="mt-20 columns-1 md:columns-2 gap-10 bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
           {histories?.map((history) => (
-            <div key={history.id} className="mb-3 break-inside-avoid">
+            <div key={history.id} className="mb-1 md:mb-3 break-inside-avoid">
               <span className="text-xs md:text-base">
                 {history.date} {history.title}
               </span>
