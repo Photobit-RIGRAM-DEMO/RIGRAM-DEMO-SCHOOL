@@ -35,7 +35,7 @@ export default function StaffSection({ staffs, schoolId }: Props) {
             <div className="flex flex-col items-center gap-2 md:gap-4">
         
               {staff.profile_url && (
-                <div className="relative w-full max-w-[80px] sm:max-w-[100px] md:max-w-[300px] rounded-lg overflow-hidden">
+                <div className="relative w-full max-w-[70px] sm:max-w-[90px] md:max-w-[300px] rounded-lg overflow-hidden">
                   <Image
                     src={staff.profile_url || "/default.png"}
                     alt={staff.position || "staff"}
