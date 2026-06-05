@@ -67,7 +67,7 @@ return (
       </section>
     
       {/* 교수진 */}
-      <section className="w-full max-w-[1600px] mx-auto bg-white border border-border rounded-md px-2 py-4 md:p-10 shadow-dropdown transition flex justify-center gap-10">
+      <section className="w-full max-w-[1600px] mx-auto bg-white border border-border rounded-md px-2 py-4 md:p-10 shadow-dropdown transition flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-10">
     
         <div className="flex flex-col items-center gap-5">
           <TeacherImage staffs={staffs ?? []} schoolId={department?.school_id} />
