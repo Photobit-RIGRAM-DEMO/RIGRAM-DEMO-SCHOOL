@@ -179,7 +179,7 @@ export default function AlbumPage() {
 
         <div className="mt-10 absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gray-800 via-gray-500 to-gray-800 z-10" />
 
-        <div className="mt-20 columns-2 gap-10 bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
+       <div className="mt-20 columns-1 md:columns-2 gap-10 bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
           {histories?.map((history) => (
             <div key={history.id} className="mb-3 break-inside-avoid">
               {history.date} {history.title}
