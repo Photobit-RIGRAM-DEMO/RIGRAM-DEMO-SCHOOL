@@ -356,49 +356,55 @@ export default function AlbumPage() {
         </div>
       </section>
 
-      <section className="w-full max-w-[1600px] mx-auto bg-white border border-border rounded-md p-4 md:p-10 shadow-dropdown transition">
-  
-      <div className="flex flex-wrap justify-center gap-6">
-        {/* 헤더 */}
-        <div className="w-full bg-gray-50 border-y border-gray-100">
-          <div className="px-4 md:px-8 py-3 md:py-4">
-            <h1 className="text-[clamp(0.95rem,1.2vw,1.125rem)] font-semibold text-gray-800 pl-3 border-l-4 border-gray-800">
-              선생님
-            </h1>
-          </div>
+      <section className="w-full max-w-[1600px] mx-auto bg-white border border-border rounded-md p-2 md:p-10 shadow-dropdown transition">
+
+      {/* 헤더 */}
+      <div className="w-full bg-gray-50 border-y border-gray-100 mb-4">
+        <div className="px-3 md:px-8 py-2 md:py-4">
+          <h1 className="text-sm md:text-[clamp(0.95rem,1.2vw,1.125rem)] font-semibold text-gray-800 pl-3 border-l-4 border-gray-800">
+            선생님
+          </h1>
         </div>
+      </div>
+    
+      {/* 리스트 */}
+      <div className="flex flex-wrap justify-center gap-2 md:gap-6">
+    
         {executives
           ?.filter((executive) => executive.position === "teacher")
           .map((executive) => (
-              <div key={executive.id} className="flex flex-col items-center gap-3 cursor-pointer group">
-
-                {/* 이미지 */}
-                <div className="relative w-[250px] rounded-lg overflow-hidden"
+            <div
+              key={executive.id}
+              className="flex flex-col items-center gap-2 cursor-pointer w-[18%] min-w-[110px] max-w-[160px]"
+            >
+    
+              {/* 이미지 */}
+              <div
+                className="relative w-full rounded-lg overflow-hidden"
                 onClick={() =>
-                    setModal({
-                      url: executive.profile_url || "",
-                      //width: 800,
-                      //height: 500,
-                    })
-                  }
-                >
-                  <Image
-                    key={executive.id}
-                    src={executive.profile_url || "/default.png"}
-                    alt={executive.position}
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-
-                <h1 className="text-[clamp(0.95rem,1.2vw,1.125rem)] font-semibold text-gray-800 pl-3">
-                  {executive.name} 선생님 ({executive.role})
-                </h1>
-
+                  setModal({
+                    url: executive.profile_url || "",
+                  })
+                }
+              >
+                <Image
+                  src={executive.profile_url || "/default.png"}
+                  alt={executive.position}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="w-full h-auto object-contain"
+                />
               </div>
+    
+              {/* 텍스트 */}
+              <h1 className="text-[10px] md:text-sm font-semibold text-gray-800 text-center leading-tight">
+                {executive.name} 선생님 ({executive.role})
+              </h1>
+    
+            </div>
           ))}
+    
       </div>
     </section>
 
