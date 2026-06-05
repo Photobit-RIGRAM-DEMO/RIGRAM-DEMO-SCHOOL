@@ -197,9 +197,9 @@ export default function AlbumPage() {
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-gray-800 via-gray-500 to-gray-800 z-10" />
         <div className="mt-20 grid grid-cols-1 gap-6">
           
-          <div className="mb-10 flex flex-row items-center justify-center gap-6 w-full group">
+          <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 w-full">
 
-            <div className="relative w-full max-w-[300px] rounded-lg overflow-hidden bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
+            <div className="relative w-full bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
               <Image
                 src={flag?.url || "/default.png"}
                 alt="교기"
@@ -212,7 +212,7 @@ export default function AlbumPage() {
             </div>
 
             {/* 이미지 */}
-            <div className="relative w-full max-w-[300px] rounded-lg overflow-hidden bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
+            <div className="relative w-full bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
               <Image
                 src={tree?.url || "/default.png"}
                 alt="교목"
@@ -224,7 +224,7 @@ export default function AlbumPage() {
               <h1 className="pt-8 text-lg font-bold text-center">교목: {tree?.description}</h1>
             </div>
 
-            <div className="relative w-full max-w-[300px] rounded-lg overflow-hidden bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
+            <div className="relative w-full bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
               <Image
                 src={flower?.url || "/default.png"}
                 alt="교화"
@@ -236,7 +236,7 @@ export default function AlbumPage() {
               <h1 className="pt-8 text-lg font-bold text-center">교화: {flower?.description}</h1>
             </div>
 
-            <div className="relative w-full max-w-[600px] rounded-lg overflow-hidden bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition">
+            <div className="relative w-full bg-white border border-border rounded-md p-5 md:p-10 shadow-dropdown transition xl:col-span-1">
               <h1 className="pb-8 text-lg font-bold text-center">교가</h1>
               <div  className="cursor-pointer" onClick={() =>
                     setModal({
