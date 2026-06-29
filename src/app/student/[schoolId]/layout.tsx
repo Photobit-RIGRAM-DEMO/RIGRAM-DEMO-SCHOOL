@@ -24,7 +24,7 @@ export default async function SchoolLayout({
     school = data;
   }
 
-  let mainClass =
+  const mainClass =
     'flex justify-center items-start flex-1 p-5 md:px-10 md:pb-0';
 
   return (
