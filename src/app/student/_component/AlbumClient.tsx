@@ -21,7 +21,7 @@ export default function AlbumClient({
     text?: string;
   } | null>(null);
 
-  const motto = symbolList?.find((s: any) => s.title === 'motto');
+  // const motto = symbolList?.find((s: any) => s.title === 'motto');
   const tree = symbolList?.find((s: any) => s.title === 'tree');
   const flower = symbolList?.find((s: any) => s.title === 'flower');
   const flag = symbolList?.find((s: any) => s.title === 'flag');
