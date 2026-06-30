@@ -119,13 +119,14 @@ export default function SchoolMainPage() {
         <div className="w-full h-full flex flex-col gap-8 md:gap-10">
           <div className="flex justify-between items-center">
             <h3 className="text-18 text-gray-900 font-semibold">상세 정보</h3>
-            <Button
+            {/* <Button
+              disabled
               className="flex items-center text-16 text-gray-600 gap-1 hover:text-gray-700 hover:font-bold focus:text-gray-700 focus:font-bold focus:outline-gray-700 active:text-gray-700 active:font-bold"
               href={`/admin/school-register/edit`}
             >
               <PencilLine className="w-4 h-4" />
               <span>정보 수정하기</span>
-            </Button>
+            </Button> */}
           </div>
           <dl className="flex flex-col gap-5">
             {InfoConfig.map((info) => (

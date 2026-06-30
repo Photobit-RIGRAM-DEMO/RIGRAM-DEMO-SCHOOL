@@ -174,10 +174,10 @@ export default function GraduateDepartmentPage() {
               </div>
             </div>
             <div className="relative md:absolute md:top-8 md:right-0 md:flex md:gap-2">
-              <Button className="flex items-center gap-1 text-gray-600" href={`${pathname}/edit`}>
+              {/* <Button className="flex items-center gap-1 text-gray-600" href={`${pathname}/edit`}>
                 <PencilLine className="w-4 h-4" aria-hidden="true" />
                 <span>졸업생 수정하기</span>
-              </Button>
+              </Button> */}
               <Button className="flex items-center gap-1 text-red" onClick={handleGraduateDelete}>
                 <Trash className="w-4 h-4" aria-hidden="true" />
                 <span>졸업생 삭제하기</span>
