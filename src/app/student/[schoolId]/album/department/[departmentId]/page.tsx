@@ -4,10 +4,10 @@ import DepartmentClient from './_component/DepartmentClient';
 export default async function DepartmentPage({
   params,
 }: {
-  params: { departmentId: string };
+  params: Promise<{ departmentId: string }>;
 }) {
   const supabase = await createClient();
-  const departmentId = params.departmentId;
+  const { departmentId } = await params;
 
   const [
     departmentResult,
